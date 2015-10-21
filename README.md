@@ -1,7 +1,7 @@
-# interactive-data-sample
+# Interactive Data Sample App
 Sample app demonstrating the use of the interactive-data framework with Spring Boot.
 
-[Sample Project on Heroku](https://interactive-data-prod.herokuapp.com/)
+[Sample Project on Heroku](https://interactive-data.herokuapp.com/)
 
 ## Usage
 You can start this app locally by checking out the sourcecode from this repository. 
