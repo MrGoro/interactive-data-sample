@@ -11,4 +11,4 @@ After checkout type the following command:
 The server will start on port 8080.
 
 ## License
-The sample app is released under the [MIT License](http://choosealicense.com/licenses/mit/).
+The sample app is released under the [MIT License](http://opensource.org/licenses/MIT).
