@@ -56,19 +56,29 @@ function showChart(data, chartInit) {
 
     enter.append("path")
         .attr("class", "line")
-        .attr("d", function(d) {
-            return line(d.data);
-        })
         .style("stroke", function(d) {
             return color(d.name);
         });
 
+    node.select("path")
+        .transition()
+        .duration(750)
+        .attr("d", function(d) {
+            return line(d.data);
+        });
+
     enter.append("text")
-        .datum(function(d) { return {name: d.name, value: d.data[d.data.length - 1]}; })
-        .attr("transform", function(d) { return "translate(" + x(d.value.date) + "," + y(d.value.value) + ")"; })
         .attr("x", 3)
         .attr("dy", ".35em")
         .text(function(d) { return d.name; });
+
+    node.select("text")
+        .transition()
+        .duration(750)
+        .attr("transform", function(d) {
+            var xy = d.data[d.data.length - 1];
+            return "translate(" + x(xy.date) + "," + y(xy.value) + ")";
+        });
 
     var remove = node.exit().remove();
 
