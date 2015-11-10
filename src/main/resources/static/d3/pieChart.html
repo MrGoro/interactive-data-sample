@@ -186,7 +186,7 @@
 
     function loadData() {
         loading(true);
-        var url = "/api/db/actionspie1?" + getStartAndEnd();
+        var url = "/api/actions/pie1?" + getStartAndEnd();
 
         d3.json(url, function(error, data) {
             var dataset = data.data;

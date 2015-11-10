@@ -104,7 +104,7 @@
     function loadData() {
         loading(true);
         $.ajax({
-            url: "/api/db/actionspie1"+getStartAndEnd(),
+            url: "/api/actions/pie1"+getStartAndEnd(),
             dataType: "json"
         })
                 .success(function(data) {

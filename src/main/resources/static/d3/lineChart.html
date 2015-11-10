@@ -262,7 +262,7 @@
     function loadData(init) {
         loading(true);
 
-        var url = "/api/db/actionsline1?selected="+getGranularity()+getStartAndEnd();
+        var url = "/api/actions/line1?selected="+getGranularity()+getStartAndEnd();
 
         d3.json(url, function(error, result) {
             var data = adjustData(result.data[0]);
