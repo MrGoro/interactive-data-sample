@@ -8,7 +8,7 @@ You can start this app locally by checking out the sourcecode from this reposito
 After checkout type the following command:
 
     $ mvn package
-    $ java -jar target/mymodule-1.0-SNAPSHOT.jar
+    $ java -jar target/interactive-data-sample-1.0-SNAPSHOT.jar
 
 The server will start on port 8080.
 
