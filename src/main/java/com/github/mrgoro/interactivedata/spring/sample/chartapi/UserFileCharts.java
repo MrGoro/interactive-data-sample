@@ -19,11 +19,12 @@ import java.time.Instant;
  * @author Philipp Sch&uuml;rmann
  */
 @Service
-@ChartService("file")
+@ChartService(value = "file", description = "Visualization of data from user CSV file")
 public class UserFileCharts {
 
     @Chart(
         name = "lastnamecount",
+        description = "Line Chart showing the quantity of each actions per first name",
         dataSource = UserCsvDataSource.class
     )
     @LineChart(

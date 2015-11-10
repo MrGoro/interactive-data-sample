@@ -21,11 +21,15 @@ import java.util.Date;
  * @author Philipp Schürmann
  */
 @Service
-@ChartService("sensor")
+@ChartService(
+    value = "sensor",
+    description = "Visualization of sensor data from database"
+)
 public class SensorCharts {
 
     @Chart(
         name = "temperature",
+        description = "Line Chart of the temperature in various cities in germany",
         dataSource = TemperatureDataSource.class,
         filter = @FilterDef(
             filter = SearchFilter.class,

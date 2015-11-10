@@ -33,11 +33,11 @@ import java.util.List;
  * @author Philipp Sch&uuml;rmann
  */
 @Service
-@ChartService("db")
+@ChartService(value = "actions", description = "Visualization of actions from database")
 public class ActionCharts {
 
     @Chart(
-        name = "actionsline1",
+        name = "line1",
         dataSource = ActionDataSource.class
     )
     @LineChart(
@@ -69,7 +69,7 @@ public class ActionCharts {
     }
 
     @Chart(
-        name = "actionsline2",
+        name = "line2",
         dataSource = ActionDataSource.class,
         filter = {
             @FilterDef(fieldName = "time", fieldClass = Date.class, filter = TimeFilter.class)
@@ -121,7 +121,7 @@ public class ActionCharts {
     }
 
     @Chart(
-        name = "actionspie1",
+        name = "pie1",
         dataSource = ActionDataSource.class,
         filter = {
             @FilterDef(fieldName = "time", fieldClass = Date.class, filter = TimeFilter.class)
@@ -157,7 +157,7 @@ public class ActionCharts {
     }
 
     @Chart(
-            name = "actionspie2",
+            name = "pie2",
             dataSource = ActionDataSource.class,
             filter = {
                 @FilterDef(fieldName = "time", fieldClass = Date.class, filter = TimeFilter.class)
